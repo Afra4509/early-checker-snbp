@@ -1,89 +1,186 @@
 # 🎓 Early Checker SNBP
 
-Script sederhana untuk melakukan *early check* (pengecekan awal) hasil SNBP melalui Developer Console menggunakan data dari portal resmi SNPMB.
+Script sederhana untuk melakukan **early check hasil SNBP** melalui **Developer Console** menggunakan data dari portal SNPMB.
 
-> **⚠️ DISCLAIMER PENTING:** > Tool ini hanya membaca data dari API yang tersedia secara lokal di *browser* saat kamu login. Hasil ini **bukan pengumuman resmi**, melainkan hanya indikasi awal. Hasil final tetap mengacu pada pengumuman resmi SNPMB dan bisa berubah sewaktu-waktu. Gunakan script ini murni untuk edukasi dan eksplorasi teknis.
-
----
-
-## 🚀 Cara Menggunakan
-
-Ikuti langkah-langkah berikut secara berurutan:
-
-### 1️⃣ Masuk ke Portal SNPMB
-1. Buka tautan berikut: [Portal Dashboard SNPMB](https://portal.snpmb.id/dashboard/index.html)
-2. Login menggunakan akun SNPMB kamu seperti biasa.
-
-### 2️⃣ Klik Menu SNBT
-1. Setelah berhasil login, masuk ke halaman **Dashboard**.
-2. Klik menu **SNBT**.
-3. Tunggu sampai halaman pendaftaran/informasi SNBT terbuka sepenuhnya.
-*(Ganti tulisan ini dengan URL gambar contohmu: `![Contoh Halaman SNBT](link-gambar-disini.png)`)*
-
-### 3️⃣ Buka Developer Console
-1. Tekan tombol `F12` di *keyboard* kamu (atau `Ctrl + Shift + I` / `Cmd + Option + I` di Mac).
-2. Pilih tab **Console**.
-*(Ganti tulisan ini dengan URL gambar contohmu: `![Contoh Tab Console](link-gambar-disini.png)`)*
-
-### 4️⃣ Eksekusi Script
-1. Copy seluruh isi script dari repositori ini, tepatnya dari file `early-checker.js`.
-2. Paste (tempel) kode tersebut ke dalam **Console** yang sudah kamu buka tadi.
-*(Ganti tulisan ini dengan URL gambar contohmu: `![Contoh Paste Script](link-gambar-disini.png)`)*
-3. Tekan `Enter`. Jika berhasil, hasil pengecekan akan langsung muncul di *console*.
-*(Ganti tulisan ini dengan URL gambar contohmu: `![Contoh Hasil](link-gambar-disini.png)`)*
+⚠️ **Disclaimer:**
+Tool ini hanya membaca data dari API yang tersedia saat kamu login.
+Hasil ini **bukan pengumuman resmi**, hanya indikasi awal.
 
 ---
 
-## 📊 Cara Membaca Hasil
+# 🚀 Cara Menggunakan
 
-Perhatikan *output* yang muncul di console:
-
-* 🎉 **`LOLOS SNBP`** 👉 Kemungkinan besar kamu **LOLOS** SNBP.
-* ❌ **`TIDAK LOLOS SNBP`** 👉 Kemungkinan kamu **TIDAK LOLOS** SNBP.
-
-### Keterangan Field Data
-
-Berikut adalah arti dari beberapa data teknis yang mungkin muncul:
-
-| Field | Arti / Keterangan |
-| :--- | :--- |
-| `is_lolos_snbp` | Status kelulusan SNBP kamu |
-| `is_mendaftar_snbp` | Status apakah kamu terdaftar sebagai peserta SNBP |
-| `is_lolos_snbt` | Status kelulusan SNBT |
-| `is_lulus_snbt` | Status hasil akhir SNBT |
-| `is_tahun_lulus_valid` | Validitas tahun kelulusan sekolahmu |
+Ikuti langkah berikut dengan urut.
 
 ---
 
-## ⚙️ Cara Kerja Script
+## 1️⃣ Masuk ke Portal SNPMB
 
-Script ini bekerja dengan mengambil (*fetch*) data mentah dari *endpoint* API milik SNPMB yang sedang aktif di sesimu, antara lain:
-* `/api/auth/user`
-* `/api/umum/eligibilitas`
-* `/api/umum/jadwal`
+Buka:
 
-Secara alternatif, data mentah ini sebenarnya juga bisa diakses langsung lewat *global object window* di browser:
-* `window.__snpmb.user`
-* `window.__snpmb.eligibilitas`
-* `window.__snpmb.jadwal`
+```bash
+https://portal.snpmb.id/dashboard/index.html
+```
+
+Login menggunakan akun SNPMB kamu seperti biasa.
 
 ---
 
-## 🧠 Tips & *Troubleshooting*
+## 2️⃣ Klik Menu SNBT
 
-Jika hasil tidak muncul atau terjadi *error*, coba lakukan hal berikut:
-* 🔄 **Refresh halaman** portal SNPMB kamu.
-* ✅ Pastikan kamu **sudah login** dan sesi belum *expired*.
-* 📍 Pastikan kamu sudah berada di dalam menu **SNBT** sebelum membuka *console*.
-* 📋 Coba *copy* dan *paste* script-nya ulang.
+Setelah login berhasil:
+
+* Masuk ke **Dashboard**
+* Klik menu **SNBT**
+* Tunggu sampai halaman SNBT terbuka
+
+📷 Contoh:
+
+![Step 1](hasil%20\(1\).png)
 
 ---
 
-## ⭐ Credits
+## 3️⃣ Buka Developer Mode
 
-Dibuat dengan 💻 oleh **[Afra4509](https://github.com/Afra4509)**.
+Tekan:
 
-Jika *project* ini membantu rasa penasaranmu, jangan lupa:
-⭐ **Star** repo ini  
-🍴 **Fork** repo ini  
-🐛 **Laporkan bug** (buat *Issue*) jika kamu menemukan masalah.
+```bash
+F12
+```
+
+Lalu:
+
+* Pilih tab **Console**
+
+📷 Contoh:
+
+![Step 2](hasil%20\(2\).png)
+
+---
+
+## 4️⃣ Copy Script
+
+Copy seluruh isi script dari repo ini
+atau dari file:
+
+```bash
+early-checker.js
+```
+
+Paste ke **Console**.
+
+📷 Contoh:
+
+![Step 3](hasil%20\(3\).png)
+
+---
+
+## 5️⃣ Tekan Enter dan Lihat Hasil
+
+Setelah paste:
+
+Tekan:
+
+```bash
+Enter
+```
+
+Jika berhasil, hasil akan muncul di console.
+
+📷 Contoh:
+
+![Step 4](hasil%20\(4\).png)
+
+---
+
+# 📊 Cara Membaca Hasil
+
+Perhatikan bagian ini:
+
+```text
+🎉 LOLOS SNBP
+```
+
+Artinya:
+
+✅ Kemungkinan **LOLOS SNBP**
+
+---
+
+Jika muncul:
+
+```text
+❌ TIDAK LOLOS SNBP
+```
+
+Artinya:
+
+❌ Kemungkinan **TIDAK LOLOS SNBP**
+
+---
+
+Field penting:
+
+| Field                  | Arti                  |
+| ---------------------- | --------------------- |
+| `is_lolos_snbp`        | Status kelulusan SNBP |
+| `is_mendaftar_snbp`    | Status pendaftaran    |
+| `is_lolos_snbt`        | Status kelulusan SNBT |
+| `is_lulus_snbt`        | Status hasil SNBT     |
+| `is_tahun_lulus_valid` | Validitas tahun lulus |
+
+---
+
+# ⚙️ Cara Kerja Script
+
+Script akan mengambil data dari endpoint berikut:
+
+```bash
+/api/auth/user
+/api/umum/eligibilitas
+/api/umum/jadwal
+```
+
+Data mentah juga bisa diakses lewat:
+
+```bash
+window.__snpmb.user
+window.__snpmb.eligibilitas
+window.__snpmb.jadwal
+```
+
+---
+
+# ⚠️ Disclaimer Penting
+
+* Ini **bukan tools resmi SNPMB**
+* Tidak menjamin hasil final
+* Bisa berubah kapan saja
+* Gunakan untuk edukasi dan eksplorasi teknis
+
+---
+
+# 🧠 Tips
+
+Jika tidak muncul hasil:
+
+Coba:
+
+* Refresh halaman
+* Pastikan sudah login
+* Pastikan berada di menu **SNBT**
+* Paste script ulang
+
+---
+
+# ⭐ Credits
+
+Made by:
+
+**Afra4509**
+
+Jika project ini membantu:
+
+⭐ Star repo
+🍴 Fork repo
+🐛 Laporkan bug jika ada
