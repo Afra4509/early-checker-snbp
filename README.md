@@ -62,35 +62,29 @@ Enter
 
 ---
 
-### 5️⃣ Lihat Hasil
-
-Jika berhasil, hasil akan muncul di console.
-
-Contoh tampilan hasil:
-
 ## 📷 Contoh Hasil
 
 ### Hasil 1 — Identitas Peserta
 
-![Hasil 1](hasil1.png)
+![Hasil 1](hasil%20\(1\).png)
 
 ---
 
 ### Hasil 2 — Eligibilitas
 
-![Hasil 2](hasil2.png)
+![Hasil 2](hasil%20\(2\).png)
 
 ---
 
 ### Hasil 3 — Detail Status
 
-![Hasil 3](hasil3.png)
+![Hasil 3](hasil%20\(3\).png)
 
 ---
 
 ### Hasil 4 — Verdict Akhir
 
-![Hasil 4](hasil4.png)
+![Hasil 4](hasil%20\(4\).png)
 
 ---
 
